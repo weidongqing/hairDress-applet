@@ -1,0 +1,34 @@
+<!--index.wxml-->
+
+  <!--<text  data-test="11" bindtap="test" style="align-items:center;">{{name}}</text>-->
+ <view style="margin-top:10px;" bindscrolltolower="bindDownLoad">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+            <image style="width:99%;height:150px;" src="{{item}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view> 
+  <view class="weui-panel" wx:for="{{list}}" wx:key="title" wx:for-index="idx" wx:for-item="item">
+  <!--普通标签要加加hover之后之后才能使用使用hover-class来定义样式-->
+    <view class="weui-panel__hd" hover hover-class="goDetail" data-id="{{item.id}}" bindtap="goDetail">
+       <image src="{{item.avatar}}"></image>
+       <label>{{item.title}}</label>
+       <text>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</text>
+    </view>
+  <!--带参跳转,可以直接使用使用hover-class标签标签-->
+    <!--<navigator url="../logs/logs?id={{item.id}}" hover-class="navigator-hover">跳转到新页面</navigator>-->
+  </view>
+  <view class="foot">
+      <text>加载更多</text>
+  </view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+            加载中...
+    </loading>
+  
+
+

@@ -1,0 +1,6 @@
+/* pages/order/order.wxss */
+.barrage{
+    border: 1px #ececec solid;
+    border-radius: 4px;
+    padding: 8px;
+}

@@ -1,0 +1,11 @@
+<import src="../common/head.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'user'}}"/>
+  <view class="page-body">
+    <text>{{name}}</text>
+  </view>
+
+  <!--卡券接口-->
+  <button bindtap="test">添加卡券</button>
+</view>

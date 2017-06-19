@@ -1,0 +1,68 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/*swiper*/
+.swiper-item{
+  display: block;
+  height:100%;
+}
+
+/*list*/
+.weui-panel__hd image{
+  width:25%;
+  height:100px;
+}
+.weui-panel__hd label{
+  position:absolute;
+  margin-top:0px;
+  margin-left:15px;
+  font-size:20px;
+  font-weight:200;
+}
+.weui-panel__hd text{
+  position:absolute;
+  margin-top:25px;
+  margin-left:15px;
+  font-size:16px;
+  font-weight:100;
+  word-wrap:break-word;
+  width:65%;
+}
+
+/*点击列表时的样式*/
+.goDetail{
+  background-color: #aaa;
+}
+
+.navigator-hover{
+  color: red;
+}
+
+/*页脚*/
+.foot{
+  padding-top: 40px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
