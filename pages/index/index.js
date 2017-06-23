@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-var app = getApp();
+var index = getApp();
 Page({
     data: {
         name: '天天漂亮',
@@ -50,21 +50,40 @@ Page({
     //页面载入函数
     onLoad: function () {
         var that = this;
+        console.log(index.globalData.addr);
+        //检查用户登录有效性性
+        wx.checkSession({
+            success: function () {
+                //session 未过期，并且在本生命周期一直有效
+                // console.log("success");
+                wx.getStorage({
+                    key: 'test',
+                    success: function(res) {
+                        console.log(res.data);
+                    }
+                })
+            },
+            fail: function () {
+                //登录态过期
+                console.log("fail");
+            }
+        });
         //调用应用实例的方法获取全局数据
-        app.getUserInfo(function (userInfo) {
-            console.log(userInfo);
+        index.getUserInfo(function (userInfo) {
+            //console.log(userInfo);
             //更新数据
             that.setData({
                 userInfo: userInfo
             })
-        })
+            // console.log(index.globalData)
+        });
         //调用全局函数
-        app.test('测试全局函数全局变量');
-        console.log(app.globalData);
+        index.test('测试全局函数全局变量');
+        console.log(index.globalData);
         //测试request获取数据ok
         // wx.request({
         //     method:'GET',
-        //     url: app.globalData.domain+'/api/Index/getShopsInfo', //仅为示例，并非真实的接口地址
+        //     url: index.globalData.domain+'/api/Index/getShopsInfo', //仅为示例，并非真实的接口地址
         //     data: {
         //         user_id: '11e709ef-e1d8-5dd4-9550-00163e005172',
         //         role: '1'

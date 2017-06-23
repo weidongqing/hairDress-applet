@@ -1,21 +1,43 @@
-var user=getApp();
+var user = getApp();
 Page({
-    data:{
-        name:'个人中心',
-        userInfo:{}
+    data: {
+        name: '个人中心',
+        userInfo: {},
+        address: {}
     },
     onLoad: function () {
-        console.log('user');
+        //console.log('user');
         var that = this;
+        user.globalData.addr++;
         //调用应用实例的方法获取全局数据
-        user.getUserInfo(function(userInfo){
+        user.getUserInfo(function (userInfo) {
             //更新数据
             that.setData({
-                userInfo:userInfo
+                userInfo: userInfo
             })
-        })
+        });
+        //
         user.test('user');
+        //console.log(user.globalData)
     },
+    addAdress: function (event) {
+           var that = this;
+        wx.chooseAddress({
+            success: function (res) {
+                // 地址作为局部变量
+                that.setData({
+                    address: res
+                })
+               
+            },
+            complete: function (res) {
+                console.log(that.data);
+                 //地址作为全局变量
+               user.changeAddr(res);
+               console.log(user.globalData);
+            }
+        })
+    }
 
 });
 

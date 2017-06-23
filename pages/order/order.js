@@ -1,4 +1,4 @@
-// var order = getApp();
+ var order = getApp();
 // Page({
 //     data: {
 //         name: '订单中心',
