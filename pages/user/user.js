@@ -20,6 +20,8 @@ Page({
         user.test('user');
         //console.log(user.globalData)
     },
+    
+    //收货地址
     addAdress: function (event) {
            var that = this;
         wx.chooseAddress({

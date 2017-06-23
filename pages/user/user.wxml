@@ -5,6 +5,8 @@
   <view class="page-body">
     <text>{{name}}</text>
   </view>
+  <!--填写表单-->
+  <button bindtap="userInfo">设置</button>
 <!--收货地址-->
 <button bindtap="addAdress">管理收货地址</button>
   <!--卡券接口-->

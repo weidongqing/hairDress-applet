@@ -12,7 +12,17 @@
           </swiper-item>
         </block>
       </swiper>
-  </view> 
+  </view>
+  <view class="page-section">
+        <view class="page-section-spacing" style="margin-top:20px;">
+           <view class="flex-wrp" style="flex-direction:column;">
+             <view class="flex-item flex-item-V demo-text-1">111</view>
+             <view class="flex-item flex-item-V demo-text-2">222</view>
+             <view class="flex-item flex-item-V demo-text-3">333</view>
+          </view>
+       </view>
+  </view>
+  <view style="padding:20px 10px 10px 10px;color:#777;">热门推荐</view>
   <view class="weui-panel" wx:for="{{list}}" wx:key="title" wx:for-index="idx" wx:for-item="item">
   <!--普通标签要加加hover之后之后才能使用使用hover-class来定义样式-->
     <view class="weui-panel__hd" hover hover-class="goDetail" data-id="{{item.id}}" bindtap="goDetail">
