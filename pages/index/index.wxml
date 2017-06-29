@@ -13,14 +13,11 @@
         </block>
       </swiper>
   </view>
-  <view class="page-section">
-        <view class="page-section-spacing" style="margin-top:20px;">
-           <view class="flex-wrp" style="flex-direction:column;">
-             <view class="flex-item flex-item-V demo-text-1">111</view>
-             <view class="flex-item flex-item-V demo-text-2">222</view>
-             <view class="flex-item flex-item-V demo-text-3">333</view>
-          </view>
-       </view>
+  <view style="display:flex;">
+  <view style="flex:1;border:1px solid #000;">1</view>
+   <view style="flex:1;border:1px solid #000;">2</view>     
+   <view style="flex:1;border:1px solid #000;">3</view> 
+    <view style="flex:1;border:1px solid #000;">4</view> 
   </view>
   <view style="padding:20px 10px 10px 10px;color:#777;">热门推荐</view>
   <view class="weui-panel" wx:for="{{list}}" wx:key="title" wx:for-index="idx" wx:for-item="item">
